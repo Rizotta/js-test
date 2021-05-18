@@ -1,1 +1,1 @@
-# js_test
+# js-test
