@@ -9,7 +9,7 @@ function resetGame() {
     attemptsCount = 0;
     generatedNumbers = [];
 
-    while(generatedNumbers.length < 4) {
+    while (generatedNumbers.length < 4) {
         const part = Math.floor(Math.random() * 10);
         if (!generatedNumbers.includes(part)) generatedNumbers.push(part);
     }
