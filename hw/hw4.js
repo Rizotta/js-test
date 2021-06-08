@@ -58,13 +58,25 @@ function numberToObject(num) {
 function showBasket() {
     let items = {
         itemList: [
-            ['телефон', 2, 10],
-            ['компьютер', 3, 100],
-            ['наушники', 5, 20],
+            {
+                product: 'телефон',
+                price: 10,
+                quantity: 2
+            },
+            {
+                product: 'компьютер',
+                price: 100,
+                quantity: 3
+            },
+            {
+                product: 'наушники',
+                price: 20,
+                quantity: 5
+            },
         ],
         countPrice() {
-            return this.itemList.reduce(function (totalPrice, currentItem) {
-                return totalPrice + currentItem[1] * currentItem[2];
+            return this.itemList.reduce(function (totalPrice, cartItem) {
+                return totalPrice + cartItem.price * cartItem.quantity;
             }, 0);
         }
     }
